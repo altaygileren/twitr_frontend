@@ -1,0 +1,26 @@
+.time-twit {
+  color: rgb(120, 120, 120);
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+.twit-body {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.single-twit-card {
+  margin-bottom: 1rem;
+}
+.create-twit-div {
+  margin-bottom: 1rem;
+}
+.comment-div {
+  margin-top: 1rem;
+}
+.commentInput {
+  width: 80% !important;
+}
+.single-comment-div {
+  font-size: 0.8rem;
+}

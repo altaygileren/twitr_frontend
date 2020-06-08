@@ -1,0 +1,12 @@
+.single-article-card {
+  margin-bottom: 1rem;
+}
+.single-article-card .card-title {
+  font-size: 0.8rem;
+}
+.article-img {
+  width: 70%;
+}
+.article-body {
+  text-align: center;
+}

@@ -1,13 +1,54 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.twitrComponents {
+  font-family: 'Montserrat';
+}
+.twitr-body {
+  margin-top: 6rem;
+}
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.App {
+  margin-top: 5rem;
+}
+.row {
+  margin: 0;
+  padding: 0;
+}
+.title-div h3 {
+  font-family: "Montserrat";
+  font-weight: 600;
+}
+
+.btn-primary {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.navbar-brand {
+  color: #007bff !important;
+  font-family: 'Montserrat';
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.loading-div {
+  text-align: center;
+  margin-top: 15rem;
+}
+.error-div {
+  margin-top: 1.5rem;
+}
+textarea {
+  resize: none;
 }
