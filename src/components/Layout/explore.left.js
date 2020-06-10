@@ -8,21 +8,21 @@ const Exploreleft = () => {
 
   useEffect(() => {
     const fetchNews = async () => {
-      // const newsArticles = await axios.get(`http://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`)
-      // console.log(newsArticles);
-      // setNews(newsArticles.data.articles);
+      const newsArticles = await axios.get(`http://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`)
+      console.log(newsArticles);
+      setNews(newsArticles.data.articles);
     }
     fetchNews()
   })
   return (
     <div>
-      {/* {
+      {
         news.map((article, i) => (
           <div>
             <Article article={article} />
           </div>
         ))
-      } */}
+      }
     </div>
   )
 }
