@@ -1,7 +1,7 @@
 import React from 'react'
 import { Spinner } from 'react-bootstrap';
 
-export default function Loading() {
+const Loading = () => {
   return (
     <div className="loading-div">
       <Spinner size="lg" animation="border" role="status">
@@ -10,3 +10,5 @@ export default function Loading() {
     </div>
   )
 }
+
+export default Loading;

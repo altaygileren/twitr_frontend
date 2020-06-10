@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function Title({ title }) {
+const Title = ({ title }) => {
   return (
     <div className="title-div">
       <h3>{title}</h3>
     </div>
   )
 }
+
+export default Title;

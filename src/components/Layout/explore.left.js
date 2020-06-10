@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import Article from './single.article';
 
-export default function Exploreleft() {
+const Exploreleft = () => {
 
   const [news, setNews] = useState([]);
 
@@ -26,3 +26,5 @@ export default function Exploreleft() {
     </div>
   )
 }
+
+export default Exploreleft;

@@ -4,7 +4,7 @@ import axios from 'axios';
 import { TwitContext } from '../../utils/TwitContext';
 import { SearchContext } from '../../utils/SearchContext';
 
-export default function Exploreright() {
+const Searchbar = () => {
   const { response } = useContext(TwitContext);
   const [search, setSearch] = useState('');
   const [searchContext, setSearchContext] = useContext(SearchContext);
@@ -34,3 +34,5 @@ export default function Exploreright() {
     </div>
   )
 }
+
+export default Searchbar;

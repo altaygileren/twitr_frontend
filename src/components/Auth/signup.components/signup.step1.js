@@ -3,7 +3,7 @@ import { Form } from 'react-bootstrap';
 import Title from '../../../utils/Title';
 import '../auth.css';
 
-export default function Step1({
+const Step1 = ({
   currentStep,
   email,
   setEmail,
@@ -13,7 +13,7 @@ export default function Step1({
   setPassword,
   passwordMatch,
   setPasswordMatch
-}) {
+}) => {
   if (currentStep !== 1) return null;
 
   return (
@@ -65,4 +65,6 @@ export default function Step1({
       </Form>
     </div>
   )
-}
+};
+
+export default Step1;

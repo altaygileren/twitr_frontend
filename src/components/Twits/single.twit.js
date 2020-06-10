@@ -5,7 +5,7 @@ import './twits.css';
 import Commenttwit from './comment.twit';
 import Showcomments from './show.comments';
 
-export default function Singletwit({ twit }) {
+const Singletwit = ({ twit }) => {
 
   const [showComments, setShowComments] = useState(false);
   const [singleTwit, setSingleTwit] = useState(twit);
@@ -36,10 +36,12 @@ export default function Singletwit({ twit }) {
             </Button>
           ) : (null)
         }
-        {/* <Commenttwit
+        <Commenttwit
           setSingleTwit={setSingleTwit}
-          twit={singleTwit} /> */}
+          twit={singleTwit} />
       </Card.Body>
     </Card>
   )
 }
+
+export default Singletwit;

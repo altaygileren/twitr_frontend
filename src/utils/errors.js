@@ -1,7 +1,7 @@
 import React from 'react'
 import { Alert } from 'react-bootstrap';
 
-export default function Errors({ message }) {
+const Errors = ({ message }) => {
   return (
     <div className="error-div">
       <Alert variant='danger'>
@@ -10,3 +10,5 @@ export default function Errors({ message }) {
     </div>
   )
 }
+
+export default Errors;

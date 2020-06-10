@@ -5,7 +5,7 @@ import { SearchContext } from '../../utils/SearchContext';
 import Createtwit from './create.twit';
 import Search from '../Layout/search.bar';
 
-export default function Alltwits() {
+const Alltwits = () => {
   const { response } = useContext(TwitContext);
   const [search] = useContext(SearchContext);
   let twits = search.length > 0 ? search : response
@@ -15,8 +15,8 @@ export default function Alltwits() {
       <Createtwit />
       <div>
         {
-          twits.map((twit, i) => (
-            <div key={i}>
+          twits.map((twit) => (
+            <div key={twit._id}>
               <Singletwit twit={twit} />
             </div>
           ))
@@ -25,3 +25,5 @@ export default function Alltwits() {
     </div >
   )
 }
+
+export default Alltwits;

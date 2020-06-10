@@ -1,7 +1,7 @@
-import React, { useContext, useState } from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
+import React, { useContext } from 'react';
+import { Navbar, Nav, Button } from 'react-bootstrap';
 import { UserContext } from '../../../utils/UserContext';
-import { Link } from 'react-router-dom';
+import { logOut } from '../../../utils/';
 
 export default function Header() {
   const { user, setUser } = useContext(UserContext);
@@ -9,15 +9,14 @@ export default function Header() {
 }
 
 const Unauth = () => {
-  const { user } = useContext(UserContext);
   return (
     <Navbar fixed={'top'} bg="light" expand="lg">
-      <Navbar.Brand href="/">twitr{user ? (<span>{user.firstName}</span>) : (null)}
+      <Navbar.Brand href="/">
+        twitr
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Link to="/link">Link</Link>
           <Nav.Link href="/signup">Signup</Nav.Link>
           <Nav.Link href="/signin">Sign in</Nav.Link>
         </Nav>
@@ -27,18 +26,24 @@ const Unauth = () => {
 }
 
 const Auth = () => {
-  const { user } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
+
+  const logUserOut = () => {
+    logOut();
+    setUser(null)
+  }
   return (
     <Navbar fixed={'top'} bg="light" expand="lg">
-      <Navbar.Brand href="/">twitr
+      <Navbar.Brand href="/">
+        twitr
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Link to="/link">Link</Link>
+          <Button onClick={logUserOut}>Logout</Button>
         </Nav>
         <Nav className="mr-auto">
-          <Nav.Link href="/profile">Welcome, {user.firstName}</Nav.Link>
+          <span>Welcome, {user.firstName}</span>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

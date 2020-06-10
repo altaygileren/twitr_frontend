@@ -1,7 +1,7 @@
 import React from 'react'
 import Comment from './single.comment';
 
-export default function Showcomments({ comments }) {
+const Showcomments = ({ comments }) => {
   return (
     <div>
       {
@@ -14,3 +14,5 @@ export default function Showcomments({ comments }) {
     </div>
   )
 }
+
+export default Showcomments;

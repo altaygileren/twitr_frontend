@@ -2,13 +2,13 @@ import React from 'react'
 import Title from '../../../utils/Title';
 import { Form } from 'react-bootstrap';
 
-export default function Step2({
+const Step2 = ({
   currentStep,
   firstName,
   lastName,
   setFirstname,
   setLastname
-}) {
+}) => {
   if (currentStep !== 2) { return null }
   return (
     <div>
@@ -38,3 +38,5 @@ export default function Step2({
     </div>
   )
 }
+
+export default Step2;

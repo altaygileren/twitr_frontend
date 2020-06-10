@@ -1,11 +1,10 @@
-import React, { useContext, useState } from 'react'
-import { Form, Button, InputGroup, FormControl } from 'react-bootstrap';
-import { UserContext } from '../../utils/UserContext';
+import React, { useState } from 'react'
+import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import { getToken } from '../../utils';
 import './twits.css';
 
-export default function Commenttwit({ twit, setSingleTwit }) {
+const Commenttwit = ({ twit, setSingleTwit }) => {
   const [comment, setComment] = useState('');
 
   const addComment = async (e) => {
@@ -46,3 +45,5 @@ export default function Commenttwit({ twit, setSingleTwit }) {
     </div>
   )
 }
+
+export default Commenttwit;

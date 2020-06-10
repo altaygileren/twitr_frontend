@@ -2,7 +2,7 @@ import React from 'react';
 import './twits.css';
 import moment from 'moment';
 
-export default function Singlecomment({ comment }) {
+const Singlecomment = ({ comment }) => {
   return (
     <div className="single-comment-div">
       <b>{comment.username}</b>
@@ -14,3 +14,5 @@ export default function Singlecomment({ comment }) {
     </div>
   )
 }
+
+export default Singlecomment;

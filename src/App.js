@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Header from './components/Layout/Header/header';
 import { TwitContextProvider } from './utils/TwitContext';
 import { UserContextProvider } from './utils/UserContext';
@@ -7,11 +7,12 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
 import Alltwits from './components/Twits/all.twits';
 import Exploreleft from './components/Layout/explore.left'
-import Exploreright from './components/Layout/search.bar'
 import Signup from './components/Auth/auth.signup';
 import Signin from './components/Auth/auth.signin';
+import Editprofile from './components/Layout/edit.profile';
 
-function App() {
+const App = () => {
+
   return (
     <UserContextProvider>
       <SearchContextProvider>
@@ -22,8 +23,8 @@ function App() {
               <div className="twitr-body">
                 <Row>
                   <Col
-                    lg={{ span: 3, order: 'first' }}
-                    md={{ span: 3, order: 'first' }}
+                    lg={{ span: 4, order: 'first' }}
+                    md={{ span: 4, order: 'first' }}
                     sm={{ span: 12, order: 'second' }}
                     xs={{ span: 12, order: 'second' }}>
                     <div className="sticky-div">
@@ -31,23 +32,16 @@ function App() {
                     </div>
                   </Col>
                   <Col
-                    lg={{ span: 6, order: 'second' }}
-                    md={{ span: 3, order: 'second' }}
+                    lg={{ span: 8, order: 'second' }}
+                    md={{ span: 8, order: 'second' }}
                     sm={{ span: 12, order: 'first' }}
                     xs={{ span: 12, order: 'first' }}>
                     <Switch>
                       <Route component={Alltwits} exact path='/' />
                       <Route component={Signup} exact path='/signup' />
                       <Route component={Signin} exact path='/signin' />
+                      {/* <Route component={Editprofile} exact path='/profile' /> */}
                     </Switch>
-                  </Col>
-                  <Col
-                    lg={{ span: 3, order: 'third' }}
-                    sm={{ span: 12, order: 'first' }}
-                    xs={{ span: 12, order: 'first' }}>
-                    <div className="sticky-div">
-                      <Exploreright />
-                    </div>
                   </Col>
                 </Row>
               </div>
