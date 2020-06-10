@@ -8,9 +8,9 @@ const Exploreleft = () => {
 
   useEffect(() => {
     const fetchNews = async () => {
-      const newsArticles = await axios.get(`http://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`)
+      const newsArticles = await axios.get(`${process.env.REACT_APP_BASE}/api/news`)
       console.log(newsArticles);
-      setNews(newsArticles.data.articles);
+      setNews(newsArticles.news);
     }
     fetchNews()
   })

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
-
+const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
 export const useFetch = (url) => {
   const [response, setResponse] = useState([]);

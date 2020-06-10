@@ -19,6 +19,7 @@ export const getToken = (tokenKey = TOKEN_KEY) => {
 export const registerUser = async info => {
   const config = {
     headers: {
+      'Access-Control-Allow-Origin': "*",
       'Content-Type': 'application/json'
     }
   }
@@ -37,6 +38,7 @@ export const registerUser = async info => {
 export const loginUser = async info => {
   const config = {
     headers: {
+      'Access-Control-Allow-Origin': "*",
       'Content-Type': 'application/json'
     }
   }
